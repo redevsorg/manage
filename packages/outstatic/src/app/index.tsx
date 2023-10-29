@@ -20,6 +20,7 @@ export type OutstaticData = {
   pages: string[]
   missingEnvVars: EnvVarsType | false
   hasOpenAIKey: boolean
+  dataSource: 'github'
 }
 
 export const defaultPages = ['settings', 'collections']
@@ -81,6 +82,7 @@ export async function Outstatic() {
     collections,
     pages: [...defaultPages, ...collections],
     missingEnvVars: false,
-    hasOpenAIKey: !!process.env.OPENAI_API_KEY
+    hasOpenAIKey: !!process.env.OPENAI_API_KEY,
+    dataSource: 'github'
   } as OutstaticData
 }

@@ -15,6 +15,7 @@ type OutstaticProviderProps = {
   addPage: (page: string) => void
   removePage: (page: string) => void
   hasOpenAIKey: boolean
+  dataSource: 'github'
 }
 
 export const OutstaticContext = createContext({
@@ -39,7 +40,8 @@ export const OutstaticProvider = ({
   pages,
   addPage,
   removePage,
-  hasOpenAIKey
+  hasOpenAIKey,
+  dataSource
 }: OutstaticProviderProps) => {
   return (
     <OutstaticContext.Provider
@@ -54,7 +56,8 @@ export const OutstaticProvider = ({
         pages,
         addPage,
         removePage,
-        hasOpenAIKey: hasOpenAIKey || false
+        hasOpenAIKey: hasOpenAIKey || false,
+        dataSource
       }}
     >
       {children}
