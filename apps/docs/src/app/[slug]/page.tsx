@@ -1,9 +1,8 @@
-import { getDocumentBySlug, getDocumentSlugs, load } from 'outstatic/server'
-import { Metadata } from 'next'
-import markdownToHtml from '@/lib/markdownToHtml'
-import formatDate from '@/lib/formatDate'
 import Header from '@/components/Header'
 import Mdx from '@/components/MDXComponent'
+import formatDate from '@/lib/formatDate'
+import { Metadata } from 'next'
+import { getDocumentBySlug, getDocumentSlugs, load } from 'outstatic/server'
 
 interface Params {
   params: {
@@ -52,10 +51,9 @@ export default async function Post(params: Params) {
       <Header />
       <div className="bg-white flex w-full">
         <aside className="border-r px-4 py-4 w-full max-w-xs sticky top-16 h-[calc(100vh-4rem)] overflow-y-scroll no-scrollbar sidebar">
-          <div
-            className="prose prose-base"
-            dangerouslySetInnerHTML={{ __html: menu.content }}
-          />
+          <div className="prose prose-base">
+            <Mdx content={menu.content} />
+          </div>
         </aside>
         <div className="w-full ml-10 sm:px-2 lg:px-8 xl:px-12 py-12">
           <article className="mb-32 w-full">
@@ -100,10 +98,28 @@ async function getData({ params }: Params) {
 
   const menu = getDocumentBySlug('menus', 'docs-menu', ['content'])
 
-  const menuContent = await markdownToHtml(menu?.content || '')
-
-  const result = await bundleMDX({
+  const docContent = await bundleMDX({
     source: doc.content,
+    mdxOptions(options) {
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        rehypeSlug,
+        rehypePrism,
+        [
+          rehypeAutolinkHeadings,
+          {
+            properties: {
+              className: ['hash-anchor']
+            }
+          }
+        ]
+      ]
+      return options
+    }
+  })
+
+  const menuContent = await bundleMDX({
+    source: menu?.content || '',
     mdxOptions(options) {
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
@@ -125,10 +141,10 @@ async function getData({ params }: Params) {
   return {
     doc: {
       ...doc,
-      content: result.code
+      content: docContent.code
     },
     menu: {
-      content: menuContent
+      content: menuContent.code
     }
   }
 }

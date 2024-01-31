@@ -2,12 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['outstatic'],
+  basePath: '/docs',
   async redirects() {
     return [
       {
         source: '/',
-        destination: '/introduction',
-        permanent: true
+        destination: '/docs/introduction',
+        permanent: true,
+        basePath: false
       }
     ]
   }
