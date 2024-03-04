@@ -1,97 +1,14 @@
-"use strict";
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __defProps = Object.defineProperties;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getOwnPropSymbols = Object.getOwnPropertySymbols;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __propIsEnum = Object.prototype.propertyIsEnumerable;
-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues = (a, b) => {
-  for (var prop in b || (b = {}))
-    if (__hasOwnProp.call(b, prop))
-      __defNormalProp(a, prop, b[prop]);
-  if (__getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(b)) {
-      if (__propIsEnum.call(b, prop))
-        __defNormalProp(a, prop, b[prop]);
-    }
-  return a;
-};
-var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from2, except, desc) => {
-  if (from2 && typeof from2 === "object" || typeof from2 === "function") {
-    for (let key of __getOwnPropNames(from2))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from2[key], enumerable: !(desc = __getOwnPropDesc(from2, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var __async = (__this, __arguments, generator) => {
-  return new Promise((resolve, reject) => {
-    var fulfilled = (value) => {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    };
-    var rejected = (value) => {
-      try {
-        step(generator.throw(value));
-      } catch (e) {
-        reject(e);
-      }
-    };
-    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
-    step((generator = generator.apply(__this, __arguments)).next());
-  });
-};
-
-// src/index.tsx
-var src_exports = {};
-__export(src_exports, {
-  Outstatic: () => Outstatic,
-  OutstaticApi: () => OutstaticApi,
-  customFieldData: () => customFieldData,
-  customFieldTypes: () => customFieldTypes,
-  defaultPages: () => defaultPages,
-  isArrayCustomField: () => isArrayCustomField
-});
-module.exports = __toCommonJS(src_exports);
-
-// src/graphql/generated/index.ts
-var import_client = require("@apollo/client");
-var Apollo = __toESM(require("@apollo/client"));
-var TreeDetailsFragmentDoc = import_client.gql`
+"use strict";var ce=Object.create;var m=Object.defineProperty,pe=Object.defineProperties,ye=Object.getOwnPropertyDescriptor,ue=Object.getOwnPropertyDescriptors,Se=Object.getOwnPropertyNames,L=Object.getOwnPropertySymbols,be=Object.getPrototypeOf,V=Object.prototype.hasOwnProperty,Ie=Object.prototype.propertyIsEnumerable;var j=(e,a,t)=>a in e?m(e,a,{enumerable:!0,configurable:!0,writable:!0,value:t}):e[a]=t,A=(e,a)=>{for(var t in a||(a={}))V.call(a,t)&&j(e,t,a[t]);if(L)for(var t of L(a))Ie.call(a,t)&&j(e,t,a[t]);return e},z=(e,a)=>pe(e,ue(a));var de=(e,a)=>{for(var t in a)m(e,t,{get:a[t],enumerable:!0})},k=(e,a,t,n)=>{if(a&&typeof a=="object"||typeof a=="function")for(let r of Se(a))!V.call(e,r)&&r!==t&&m(e,r,{get:()=>a[r],enumerable:!(n=ye(a,r))||n.enumerable});return e};var R=(e,a,t)=>(t=e!=null?ce(be(e)):{},k(a||!e||!e.__esModule?m(t,"default",{value:e,enumerable:!0}):t,e)),Me=e=>k(m({},"__esModule",{value:!0}),e);var o=(e,a,t)=>new Promise((n,r)=>{var i=s=>{try{l(t.next(s))}catch(c){r(c)}},b=s=>{try{l(t.throw(s))}catch(c){r(c)}},l=s=>s.done?n(s.value):Promise.resolve(s.value).then(i,b);l((t=t.apply(e,a)).next())});var ke={};de(ke,{Outstatic:()=>xe,OutstaticApi:()=>Le,customFieldData:()=>Ve,customFieldTypes:()=>je,defaultPages:()=>Z,isArrayCustomField:()=>ze});module.exports=Me(ke);var p=require("@apollo/client"),D=R(require("@apollo/client"));var ge=p.gql`
   fragment TreeDetails on TreeEntry {
     path
     type
   }
-`;
-var BlobDetailsFragmentDoc = import_client.gql`
+`,me=p.gql`
   fragment BlobDetails on Blob {
     oid
     commitUrl
   }
-`;
-var RecursiveTreeDetailsFragmentDoc = import_client.gql`
+`,Ae=p.gql`
   fragment RecursiveTreeDetails on Tree {
     entries {
       ...TreeDetails
@@ -152,10 +69,9 @@ var RecursiveTreeDetailsFragmentDoc = import_client.gql`
       }
     }
   }
-  ${TreeDetailsFragmentDoc}
-  ${BlobDetailsFragmentDoc}
-`;
-var CreateCommitDocument = import_client.gql`
+  ${ge}
+  ${me}
+`,He=p.gql`
   mutation createCommit($input: CreateCommitOnBranchInput!) {
     createCommitOnBranch(input: $input) {
       commit {
@@ -163,8 +79,7 @@ var CreateCommitDocument = import_client.gql`
       }
     }
   }
-`;
-var CollectionsDocument = import_client.gql`
+`;var q=p.gql`
   query Collections($owner: String!, $name: String!, $contentPath: String!) {
     repository(owner: $owner, name: $name) {
       id
@@ -178,8 +93,7 @@ var CollectionsDocument = import_client.gql`
       }
     }
   }
-`;
-var DocumentDocument = import_client.gql`
+`;var Qe=p.gql`
   query Document($owner: String!, $name: String!, $filePath: String!) {
     repository(owner: $owner, name: $name) {
       id
@@ -191,8 +105,7 @@ var DocumentDocument = import_client.gql`
       }
     }
   }
-`;
-var DocumentsDocument = import_client.gql`
+`;var We=p.gql`
   query Documents($owner: String!, $name: String!, $contentPath: String!) {
     repository(owner: $owner, name: $name) {
       id
@@ -210,8 +123,7 @@ var DocumentsDocument = import_client.gql`
       }
     }
   }
-`;
-var GetFileInformationDocument = import_client.gql`
+`;var Ke=p.gql`
   query GetFileInformation(
     $owner: String!
     $name: String!
@@ -227,9 +139,8 @@ var GetFileInformationDocument = import_client.gql`
       }
     }
   }
-  ${RecursiveTreeDetailsFragmentDoc}
-`;
-var OidDocument = import_client.gql`
+  ${Ae}
+`;var Ye=p.gql`
   query Oid($owner: String!, $name: String!, $branch: String!) {
     repository(owner: $owner, name: $name) {
       id
@@ -246,497 +157,4 @@ var OidDocument = import_client.gql`
       }
     }
   }
-`;
-
-// src/utils/apollo.ts
-var import_client2 = require("@apollo/client");
-var import_context = require("@apollo/client/link/context");
-var import_cross_fetch = __toESM(require("cross-fetch"));
-var import_react = require("react");
-var apolloClient;
-var apolloCache = new import_client2.InMemoryCache({
-  typePolicies: {}
-});
-function getSession() {
-  return __async(this, null, function* () {
-    const response = yield (0, import_cross_fetch.default)("/api/outstatic/user");
-    return response.json();
-  });
-}
-function createApolloClient(session) {
-  const httpLink = (0, import_client2.createHttpLink)({
-    uri: "https://api.github.com/graphql",
-    // Prefer explicit `window.fetch` when available so that outgoing requests
-    // are captured and deferred until the Service Worker is ready. If no window
-    // or window.fetch, default to cross-fetch's ponyfill
-    fetch: (...args) => (typeof window !== "undefined" && typeof window.fetch === "function" ? window.fetch : import_cross_fetch.default)(...args)
-  });
-  const authLink = (0, import_context.setContext)((_0, _1) => __async(this, [_0, _1], function* (_, { headers }) {
-    var _a2;
-    const data = session ? { session } : yield getSession();
-    const modifiedHeader = {
-      headers: __spreadProps(__spreadValues({}, headers), {
-        authorization: ((_a2 = data.session) == null ? void 0 : _a2.access_token) ? `Bearer ${data.session.access_token}` : ""
-      })
-    };
-    return modifiedHeader;
-  }));
-  return new import_client2.ApolloClient({
-    ssrMode: typeof window === "undefined",
-    link: (0, import_client2.from)([authLink, httpLink]),
-    cache: apolloCache
-  });
-}
-function initializeApollo(initialState = null, session) {
-  const apolloClientGlobal = apolloClient != null ? apolloClient : createApolloClient(session);
-  if (initialState) {
-    apolloClientGlobal.cache.restore(initialState);
-  }
-  if (typeof window === "undefined")
-    return apolloClientGlobal;
-  apolloClient = apolloClient != null ? apolloClient : apolloClientGlobal;
-  return apolloClient;
-}
-
-// src/utils/auth/auth.ts
-var Iron = __toESM(require("@hapi/iron"));
-var import_headers2 = require("next/headers");
-
-// src/utils/auth/auth-cookies.ts
-var import_cookie = require("cookie");
-var import_headers = require("next/headers");
-var TOKEN_NAME = "ost_token";
-var MAX_AGE = 60 * 60 * 8;
-function setTokenCookie(token) {
-  (0, import_headers.cookies)().set(TOKEN_NAME, token, {
-    maxAge: MAX_AGE,
-    expires: new Date(Date.now() + MAX_AGE * 1e3),
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    sameSite: "lax"
-  });
-}
-
-// src/utils/auth/auth.ts
-var _a;
-var TOKEN_SECRET = (_a = process.env.OST_TOKEN_SECRET) != null ? _a : "";
-function setLoginSession(session) {
-  return __async(this, null, function* () {
-    const obj = __spreadValues({}, session);
-    const token = yield Iron.seal(obj, TOKEN_SECRET, Iron.defaults);
-    setTokenCookie(token);
-  });
-}
-function getLoginSession() {
-  return __async(this, null, function* () {
-    var _a2;
-    const cookieStore = (0, import_headers2.cookies)();
-    const token = (_a2 = cookieStore.get("ost_token")) == null ? void 0 : _a2.value;
-    if (!token)
-      return null;
-    try {
-      const session = yield Iron.unseal(token, TOKEN_SECRET, Iron.defaults);
-      const expires = session.expires + MAX_AGE * 1e3;
-      if (Date.now() > expires) {
-        throw new Error("Session expired");
-      }
-      return session;
-    } catch (e) {
-      return null;
-    }
-  });
-}
-
-// src/utils/envVarsCheck.ts
-var initialEnvVars = {
-  required: {
-    OST_GITHUB_ID: false,
-    OST_GITHUB_SECRET: false,
-    OST_TOKEN_SECRET: false
-  },
-  optional: {
-    OST_CONTENT_PATH: false,
-    OST_REPO_OWNER: false
-  }
-};
-var envVars = function() {
-  const envVarsObj = {
-    hasMissingEnvVars: false,
-    envVars: {
-      required: {},
-      optional: {}
-    }
-  };
-  if (process.env.OST_REPO_SLUG) {
-    initialEnvVars.required.OST_REPO_SLUG = true;
-  } else if (process.env.VERCEL_GIT_REPO_SLUG) {
-    initialEnvVars.required.VERCEL_GIT_REPO_SLUG = true;
-  } else {
-    initialEnvVars.required.OST_REPO_SLUG = false;
-  }
-  Object.entries(initialEnvVars.required).forEach(([key]) => {
-    envVarsObj.envVars.required[key] = !!process.env[key];
-    if (!process.env[key]) {
-      envVarsObj.hasMissingEnvVars = true;
-    }
-  });
-  Object.entries(initialEnvVars.optional).forEach(([key]) => {
-    envVarsObj.envVars.optional[key] = !!process.env[key];
-  });
-  return envVarsObj;
-}();
-
-// src/app/index.tsx
-var defaultPages = ["settings", "collections"];
-function Outstatic() {
-  return __async(this, null, function* () {
-    var _a2, _b, _c, _d;
-    if (envVars.hasMissingEnvVars) {
-      return {
-        missingEnvVars: envVars.envVars
-      };
-    }
-    const session = yield getLoginSession();
-    const apolloClient2 = session ? initializeApollo(null, session) : null;
-    let collections = [];
-    if (apolloClient2) {
-      try {
-        const { data: documentQueryData } = yield apolloClient2.query({
-          query: CollectionsDocument,
-          variables: {
-            name: process.env.OST_REPO_SLUG || process.env.VERCEL_GIT_REPO_SLUG || "",
-            contentPath: `${process.env.OST_REPO_BRANCH || "main"}:${process.env.OST_MONOREPO_PATH ? process.env.OST_MONOREPO_PATH + "/" : ""}${process.env.OST_CONTENT_PATH || "outstatic/content"}`,
-            owner: process.env.OST_REPO_OWNER || ((_a2 = session == null ? void 0 : session.user) == null ? void 0 : _a2.login) || ""
-          },
-          fetchPolicy: "no-cache"
-        });
-        const documentQueryObject = (_b = documentQueryData == null ? void 0 : documentQueryData.repository) == null ? void 0 : _b.object;
-        if ((documentQueryObject == null ? void 0 : documentQueryObject.__typename) === "Tree") {
-          collections = (_c = documentQueryObject == null ? void 0 : documentQueryObject.entries) == null ? void 0 : _c.map((entry) => entry.type === "tree" ? entry.name : void 0).filter(Boolean);
-        }
-      } catch (error) {
-        console.log({ error });
-      }
-    }
-    return {
-      repoOwner: process.env.OST_REPO_OWNER || ((_d = session == null ? void 0 : session.user) == null ? void 0 : _d.login) || "",
-      repoSlug: process.env.OST_REPO_SLUG || process.env.VERCEL_GIT_REPO_SLUG || "",
-      repoBranch: process.env.OST_REPO_BRANCH || "main",
-      contentPath: process.env.OST_CONTENT_PATH || "outstatic/content",
-      monorepoPath: process.env.OST_MONOREPO_PATH || "",
-      session: session || null,
-      initialApolloState: null,
-      collections,
-      pages: [...defaultPages, ...collections],
-      missingEnvVars: false,
-      hasOpenAIKey: !!process.env.OPENAI_API_KEY
-    };
-  });
-}
-
-// src/app/api/auth/callback.ts
-var import_next_connect = require("next-connect");
-var import_next_session = __toESM(require("next-session"));
-var import_server = require("next/server");
-var router = (0, import_next_connect.createEdgeRouter)();
-var getSession2 = (0, import_next_session.default)();
-function GET(request) {
-  return __async(this, null, function* () {
-    return router.run(request, { params: { id: "1" } });
-  });
-}
-function getAccessToken(code) {
-  return __async(this, null, function* () {
-    const request = yield fetch("https://github.com/login/oauth/access_token", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        client_id: process.env.OST_GITHUB_ID,
-        client_secret: process.env.OST_GITHUB_SECRET,
-        code
-      })
-    });
-    const text = yield request.text();
-    const params = new URLSearchParams(text);
-    return params.get("access_token");
-  });
-}
-function fetchGitHubUser(token) {
-  return __async(this, null, function* () {
-    const request = yield fetch("https://api.github.com/user", {
-      headers: {
-        Authorization: "token " + token
-      }
-    });
-    return yield request.json();
-  });
-}
-function checkRepository(token, userName) {
-  return __async(this, null, function* () {
-    const repoOwner = process.env.OST_REPO_OWNER || userName;
-    const repoSlug = process.env.OST_REPO_SLUG || process.env.VERCEL_GIT_REPO_SLUG || "";
-    const response = yield fetch(
-      `https://api.github.com/repos/${repoOwner}/${repoSlug}`,
-      {
-        headers: {
-          Authorization: `token ${token}`
-        }
-      }
-    );
-    if (response.status === 200)
-      return true;
-    else
-      return false;
-  });
-}
-function checkCollaborator(token, userName) {
-  return __async(this, null, function* () {
-    const repoSlug = process.env.OST_REPO_SLUG || process.env.VERCEL_GIT_REPO_SLUG || "";
-    if (process.env.OST_REPO_OWNER) {
-      const response = yield fetch(
-        `https://api.github.com/repos/${process.env.OST_REPO_OWNER}/${repoSlug}/collaborators/${userName}`,
-        {
-          headers: {
-            Authorization: `token ${token}`
-          }
-        }
-      );
-      if (response.status !== 204)
-        return false;
-    }
-    return true;
-  });
-}
-router.use((req, res, next) => __async(void 0, null, function* () {
-  yield getSession2(req, res);
-  const response = yield next();
-  if (response) {
-    const url = req.nextUrl.clone();
-    url.pathname = "/outstatic";
-    url.search = "";
-    if (response.status !== 200) {
-      const data = yield response.json();
-      url.searchParams.set("error", data.error);
-    }
-    return import_server.NextResponse.redirect(url);
-  }
-})).get((req) => __async(void 0, null, function* () {
-  var _a2, _b;
-  const error = (_a2 = req == null ? void 0 : req.nextUrl.searchParams) == null ? void 0 : _a2.get("error");
-  if (error) {
-    return import_server.NextResponse.json({ error }, { status: 403 });
-  }
-  const code = (_b = req == null ? void 0 : req.nextUrl.searchParams) == null ? void 0 : _b.get("code");
-  const access_token = yield getAccessToken(code);
-  req.session.token = access_token;
-  const userData = yield fetchGitHubUser(access_token || "");
-  const checks = Promise.all([
-    checkRepository(req.session.token, userData.login),
-    checkCollaborator(req.session.token, userData.login)
-  ]);
-  const [repoExists, isCollaborator] = yield checks;
-  if (!repoExists) {
-    return import_server.NextResponse.json(
-      { error: "repository-not-found" },
-      { status: 404, statusText: "Repository not found" }
-    );
-  }
-  if (!isCollaborator) {
-    return import_server.NextResponse.json(
-      { error: "not-collaborator" },
-      { status: 403, statusText: "Forbidden" }
-    );
-  }
-  if (!userData.email) {
-    const emails = yield (yield fetch("https://api.github.com/user/emails", {
-      headers: {
-        Authorization: `token ${access_token}`
-      }
-    })).json();
-    if ((emails === null || emails === void 0 ? void 0 : emails.length) > 0) {
-      var _emails$find;
-      userData.email = (_emails$find = emails.find(
-        (email) => email.primary
-      )) === null || _emails$find === void 0 ? void 0 : _emails$find.email;
-      if (!userData.email)
-        userData.email = emails[0].email;
-    }
-  }
-  if (userData && access_token) {
-    const { name, login, email, avatar_url } = userData;
-    yield setLoginSession({
-      user: { name, login, email, image: avatar_url },
-      access_token,
-      expires: new Date(Date.now() + MAX_AGE * 1e3)
-    });
-    return new import_server.NextResponse("ok", { status: 200 });
-  } else {
-    return import_server.NextResponse.json({ error: "something" }, { status: 403 });
-  }
-}));
-
-// src/app/api/auth/login.ts
-var import_navigation = require("next/navigation");
-function GET2() {
-  return __async(this, null, function* () {
-    var _a2, _b;
-    const scopes = ["read:user", "user:email", "repo"];
-    const url = new URL("https://github.com/login/oauth/authorize");
-    url.searchParams.append("client_id", (_a2 = process.env.OST_GITHUB_ID) != null ? _a2 : "");
-    url.searchParams.append("scope", scopes.join(","));
-    url.searchParams.append("response_type", "code");
-    if ((_b = process.env) == null ? void 0 : _b.OST_GITHUB_CALLBACK_URL) {
-      url.searchParams.append("redirect_uri", process.env.OST_GITHUB_CALLBACK_URL);
-    }
-    (0, import_navigation.redirect)(url.toString());
-  });
-}
-
-// src/app/api/auth/signout.ts
-var import_headers3 = require("next/headers");
-var import_server2 = require("next/server");
-function GET3(req) {
-  return __async(this, null, function* () {
-    (0, import_headers3.cookies)().set(TOKEN_NAME, "", {
-      maxAge: -1,
-      path: "/"
-    });
-    const homeUrl = new URL("/", req.url);
-    return import_server2.NextResponse.redirect(homeUrl);
-  });
-}
-
-// src/app/api/auth/user.ts
-var import_server3 = require("next/server");
-function user() {
-  return __async(this, null, function* () {
-    try {
-      const session = yield getLoginSession();
-      return import_server3.NextResponse.json({ session });
-    } catch (error) {
-      return import_server3.NextResponse.json({ error });
-    }
-  });
-}
-
-// src/app/api/generate/index.tsx
-var import_ai = require("ai");
-var import_openai = __toESM(require("openai"));
-var openai = new import_openai.default({
-  apiKey: process.env.OPENAI_API_KEY || ""
-});
-function POST(req) {
-  return __async(this, null, function* () {
-    const session = yield getLoginSession();
-    if (!session) {
-      return new Response("Unauthorized", { status: 401 });
-    }
-    let { prompt } = yield req.json();
-    const response = yield openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "system",
-          content: "You are an AI writing assistant that autocompletes existing text based on context from prior text. Give more weight/priority to the later characters than the beginning ones.Limit your response to no more than 200 characters, but make sure to construct complete sentences."
-        },
-        {
-          role: "user",
-          content: prompt
-        }
-      ],
-      temperature: 0.7,
-      top_p: 1,
-      frequency_penalty: 0,
-      presence_penalty: 0,
-      stream: true,
-      n: 1
-    });
-    const stream = (0, import_ai.OpenAIStream)(response);
-    return new import_ai.StreamingTextResponse(stream);
-  });
-}
-
-// src/utils/constants.ts
-var IMAGES_PATH = "images/";
-
-// src/app/api/images/index.ts
-var REPO_SLUG = process.env.OST_REPO_SLUG || process.env.VERCEL_GIT_REPO_SLUG;
-var REPO_BRANCH = process.env.OST_REPO_BRANCH || "main";
-var MONOREPO_PATH = process.env.OST_MONOREPO_PATH;
-function GET4(req, res) {
-  return __async(this, null, function* () {
-    var _a2;
-    const session = yield getLoginSession();
-    const REPO_OWNER = process.env.OST_REPO_OWNER || ((_a2 = session == null ? void 0 : session.user) == null ? void 0 : _a2.login);
-    if (session == null ? void 0 : session.access_token) {
-      const response = yield fetch(
-        `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_SLUG}/${REPO_BRANCH}/${MONOREPO_PATH ? MONOREPO_PATH + "/" : ""}public/${IMAGES_PATH}${req.nextUrl.pathname.split("/").pop()}`,
-        {
-          headers: {
-            authorization: `token ${session.access_token}`
-          }
-        }
-      );
-      if (response.status === 200 && response.body) {
-        const contentType = response.headers.get("Content-Type");
-        const content = contentType === "image/svg+xml" ? yield response.blob() : Buffer.from(yield response.arrayBuffer());
-        const newHeaders = new Headers(req.headers);
-        newHeaders.set("Cache-Control", "max-age=300");
-        return new Response(content, {
-          status: 200,
-          headers: { "Cache-Control": "max-age=300" }
-        });
-      }
-      return new Response(response.statusText, {
-        status: response.status
-      });
-    } else {
-      return new Response("Unauthorized", {
-        status: 401
-      });
-    }
-  });
-}
-
-// src/app/api/index.tsx
-var getPaths = {
-  callback: GET,
-  login: GET2,
-  signout: GET3,
-  user,
-  images: GET4
-};
-var postPaths = {
-  generate: POST
-};
-var OutstaticApi = {
-  GET: (_0, _1) => __async(void 0, [_0, _1], function* (req, { params }) {
-    const { ost } = params;
-    const rsp = getPaths[ost[0]](req);
-    return rsp;
-  }),
-  POST: (_0, _1) => __async(void 0, [_0, _1], function* (req, { params }) {
-    const { ost } = params;
-    const rsp = postPaths[ost[0]](req);
-    return rsp;
-  })
-};
-
-// src/types/index.ts
-var customFieldTypes = ["String", "Text", "Number", "Tags"];
-var customFieldData = ["string", "number", "array"];
-function isArrayCustomField(obj) {
-  return obj && obj.dataType === "array" && Array.isArray(obj.values);
-}
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  Outstatic,
-  OutstaticApi,
-  customFieldData,
-  customFieldTypes,
-  defaultPages,
-  isArrayCustomField
-});
+`;var u=require("@apollo/client"),F=require("@apollo/client/link/context"),x=R(require("cross-fetch")),Re=require("react");var y,Ee=new u.InMemoryCache({typePolicies:{}});function Pe(){return o(this,null,function*(){return(yield(0,x.default)("/api/outstatic/user")).json()})}function Ce(e){let a=(0,u.createHttpLink)({uri:"https://api.github.com/graphql",fetch:(...n)=>(typeof window!="undefined"&&typeof window.fetch=="function"?window.fetch:x.default)(...n)}),t=(0,F.setContext)((i,b)=>o(this,[i,b],function*(n,{headers:r}){var c;let l=e?{session:e}:yield Pe();return{headers:z(A({},r),{authorization:(c=l.session)!=null&&c.access_token?`Bearer ${l.session.access_token}`:""})}}));return new u.ApolloClient({ssrMode:typeof window=="undefined",link:(0,u.from)([t,a]),cache:Ee})}function G(e=null,a){let t=y!=null?y:Ce(a);return e&&t.cache.restore(e),typeof window=="undefined"?t:(y=y!=null?y:t,y)}var d=R(require("@hapi/iron")),K=require("next/headers");var De=require("cookie"),H=require("next/headers"),U="ost_token",g=60*60*8;function Q(e){(0,H.cookies)().set(U,e,{maxAge:g,expires:new Date(Date.now()+g*1e3),httpOnly:!0,secure:process.env.NODE_ENV==="production",path:"/",sameSite:"lax"})}var W,Y=(W=process.env.OST_TOKEN_SECRET)!=null?W:"";function $(e){return o(this,null,function*(){let a=A({},e),t=yield d.seal(a,Y,d.defaults);Q(t)})}function S(){return o(this,null,function*(){var t;let a=(t=(0,K.cookies)().get("ost_token"))==null?void 0:t.value;if(!a)return null;try{let n=yield d.unseal(a,Y,d.defaults),r=n.expires+g*1e3;if(Date.now()>r)throw new Error("Session expired");return n}catch(n){return null}})}var E={required:{OST_GITHUB_ID:!1,OST_GITHUB_SECRET:!1,OST_TOKEN_SECRET:!1},optional:{OST_CONTENT_PATH:!1,OST_REPO_OWNER:!1}},_=function(){let e={hasMissingEnvVars:!1,envVars:{required:{},optional:{}}};return process.env.OST_REPO_SLUG?E.required.OST_REPO_SLUG=!0:process.env.VERCEL_GIT_REPO_SLUG?E.required.VERCEL_GIT_REPO_SLUG=!0:E.required.OST_REPO_SLUG=!1,Object.entries(E.required).forEach(([a])=>{e.envVars.required[a]=!!process.env[a],process.env[a]||(e.hasMissingEnvVars=!0)}),Object.entries(E.optional).forEach(([a])=>{e.envVars.optional[a]=!!process.env[a]}),e}();var Z=["settings","collections"];function xe(){return o(this,null,function*(){var n,r,i,b;if(_.hasMissingEnvVars)return{missingEnvVars:_.envVars};let e=yield S(),a=e?G(null,e):null,t=[];if(a)try{let{data:l}=yield a.query({query:q,variables:{name:process.env.OST_REPO_SLUG||process.env.VERCEL_GIT_REPO_SLUG||"",contentPath:`${process.env.OST_REPO_BRANCH||"main"}:${process.env.OST_MONOREPO_PATH?process.env.OST_MONOREPO_PATH+"/":""}${process.env.OST_CONTENT_PATH||"outstatic/content"}`,owner:process.env.OST_REPO_OWNER||((n=e==null?void 0:e.user)==null?void 0:n.login)||""},fetchPolicy:"no-cache"}),s=(r=l==null?void 0:l.repository)==null?void 0:r.object;(s==null?void 0:s.__typename)==="Tree"&&(t=(i=s==null?void 0:s.entries)==null?void 0:i.map(c=>c.type==="tree"?c.name:void 0).filter(Boolean))}catch(l){console.log({error:l})}return{repoOwner:process.env.OST_REPO_OWNER||((b=e==null?void 0:e.user)==null?void 0:b.login)||"",repoSlug:process.env.OST_REPO_SLUG||process.env.VERCEL_GIT_REPO_SLUG||"",repoBranch:process.env.OST_REPO_BRANCH||"main",contentPath:process.env.OST_CONTENT_PATH||"outstatic/content",monorepoPath:process.env.OST_MONOREPO_PATH||"",session:e||null,initialApolloState:null,collections:t,pages:[...Z,...t],missingEnvVars:!1,hasOpenAIKey:!!process.env.OPENAI_API_KEY}})}var J=require("next-connect"),X=R(require("next-session")),M=require("next/server");var ee=(0,J.createEdgeRouter)(),Ue=(0,X.default)();function f(e){return o(this,null,function*(){return ee.run(e,{params:{id:"1"}})})}function _e(e){return o(this,null,function*(){let t=yield(yield fetch("https://github.com/login/oauth/access_token",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({client_id:process.env.OST_GITHUB_ID,client_secret:process.env.OST_GITHUB_SECRET,code:e})})).text();return new URLSearchParams(t).get("access_token")})}function fe(e){return o(this,null,function*(){return yield(yield fetch("https://api.github.com/user",{headers:{Authorization:"token "+e}})).json()})}function Te(e,a){return o(this,null,function*(){let t=process.env.OST_REPO_OWNER||a,n=process.env.OST_REPO_SLUG||process.env.VERCEL_GIT_REPO_SLUG||"";return(yield fetch(`https://api.github.com/repos/${t}/${n}`,{headers:{Authorization:`token ${e}`}})).status===200})}function ve(e,a){return o(this,null,function*(){let t=process.env.OST_REPO_SLUG||process.env.VERCEL_GIT_REPO_SLUG||"";return!(process.env.OST_REPO_OWNER&&(yield fetch(`https://api.github.com/repos/${process.env.OST_REPO_OWNER}/${t}/collaborators/${a}`,{headers:{Authorization:`token ${e}`}})).status!==204)})}ee.use((e,a,t)=>o(void 0,null,function*(){yield Ue(e,a);let n=yield t();if(n){let r=e.nextUrl.clone();if(r.pathname="/outstatic",r.search="",n.status!==200){let i=yield n.json();r.searchParams.set("error",i.error)}return M.NextResponse.redirect(r)}})).get(e=>o(void 0,null,function*(){var c,w;let a=(c=e==null?void 0:e.nextUrl.searchParams)==null?void 0:c.get("error");if(a)return M.NextResponse.json({error:a},{status:403});let t=(w=e==null?void 0:e.nextUrl.searchParams)==null?void 0:w.get("code"),n=yield _e(t);e.session.token=n;let r=yield fe(n||""),i=Promise.all([Te(e.session.token,r.login),ve(e.session.token,r.login)]),[b,l]=yield i;if(!b)return M.NextResponse.json({error:"repository-not-found"},{status:404,statusText:"Repository not found"});if(!l)return M.NextResponse.json({error:"not-collaborator"},{status:403,statusText:"Forbidden"});if(!r.email){let I=yield(yield fetch("https://api.github.com/user/emails",{headers:{Authorization:`token ${n}`}})).json();if((I==null?void 0:I.length)>0){var s;r.email=(s=I.find(C=>C.primary))===null||s===void 0?void 0:s.email,r.email||(r.email=I[0].email)}}if(r&&n){let{name:I,login:C,email:ie,avatar_url:le}=r;return yield $({user:{name:I,login:C,email:ie,image:le},access_token:n,expires:new Date(Date.now()+g*1e3)}),new M.NextResponse("ok",{status:200})}else return M.NextResponse.json({error:"something"},{status:403})}));var ae=require("next/navigation");function T(){return o(this,null,function*(){var t,n;let e=["read:user","user:email","repo"],a=new URL("https://github.com/login/oauth/authorize");a.searchParams.append("client_id",(t=process.env.OST_GITHUB_ID)!=null?t:""),a.searchParams.append("scope",e.join(",")),a.searchParams.append("response_type","code"),(n=process.env)!=null&&n.OST_GITHUB_CALLBACK_URL&&a.searchParams.append("redirect_uri",process.env.OST_GITHUB_CALLBACK_URL),(0,ae.redirect)(a.toString())})}var te=require("next/headers"),re=require("next/server");function v(e){return o(this,null,function*(){(0,te.cookies)().set(U,"",{maxAge:-1,path:"/"});let a=new URL("/",e.url);return re.NextResponse.redirect(a)})}var h=require("next/server");function O(){return o(this,null,function*(){try{let e=yield S();return h.NextResponse.json({session:e})}catch(e){return h.NextResponse.json({error:e})}})}var P=require("ai"),ne=R(require("openai"));var he=new ne.default({apiKey:process.env.OPENAI_API_KEY||""});function B(e){return o(this,null,function*(){if(!(yield S()))return new Response("Unauthorized",{status:401});let{prompt:t}=yield e.json(),n=yield he.chat.completions.create({model:"gpt-3.5-turbo",messages:[{role:"system",content:"You are an AI writing assistant that autocompletes existing text based on context from prior text. Give more weight/priority to the later characters than the beginning ones.Limit your response to no more than 200 characters, but make sure to construct complete sentences."},{role:"user",content:t}],temperature:.7,top_p:1,frequency_penalty:0,presence_penalty:0,stream:!0,n:1}),r=(0,P.OpenAIStream)(n);return new P.StreamingTextResponse(r)})}var oe="images/";var Oe=process.env.OST_REPO_SLUG||process.env.VERCEL_GIT_REPO_SLUG,Be=process.env.OST_REPO_BRANCH||"main",se=process.env.OST_MONOREPO_PATH;function N(e,a){return o(this,null,function*(){var r;let t=yield S(),n=process.env.OST_REPO_OWNER||((r=t==null?void 0:t.user)==null?void 0:r.login);if(t!=null&&t.access_token){let i=yield fetch(`https://raw.githubusercontent.com/${n}/${Oe}/${Be}/${se?se+"/":""}public/${oe}${e.nextUrl.pathname.split("/").pop()}`,{headers:{authorization:`token ${t.access_token}`}});if(i.status===200&&i.body){let l=i.headers.get("Content-Type")==="image/svg+xml"?yield i.blob():Buffer.from(yield i.arrayBuffer());return new Headers(e.headers).set("Cache-Control","max-age=300"),new Response(l,{status:200,headers:{"Cache-Control":"max-age=300"}})}return new Response(i.statusText,{status:i.status})}else return new Response("Unauthorized",{status:401})})}var Ne={callback:f,login:T,signout:v,user:O,images:N},we={generate:B},Le={GET:(t,n)=>o(void 0,[t,n],function*(e,{params:a}){let{ost:r}=a;return Ne[r[0]](e)}),POST:(t,n)=>o(void 0,[t,n],function*(e,{params:a}){let{ost:r}=a;return we[r[0]](e)})};var je=["String","Text","Number","Tags"],Ve=["string","number","array"];function ze(e){return e&&e.dataType==="array"&&Array.isArray(e.values)}0&&(module.exports={Outstatic,OutstaticApi,customFieldData,customFieldTypes,defaultPages,isArrayCustomField});

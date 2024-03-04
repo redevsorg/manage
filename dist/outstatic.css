@@ -3426,9 +3426,9 @@ video {
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -3449,9 +3449,9 @@ video {
   border-radius: 0.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -3489,9 +3489,9 @@ video {
   border-radius: 0.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -3520,7 +3520,7 @@ video {
   line-height: 1.75rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .react-datepicker__input-time-container {
@@ -3529,7 +3529,7 @@ video {
   align-items: center;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 input.react-datepicker-time__input {
@@ -3541,16 +3541,16 @@ input.react-datepicker-time__input {
   border-radius: 0.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   padding: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
   line-height: 2;
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(209 213 219 / var(--tw-text-opacity));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -3629,7 +3629,7 @@ input.react-datepicker-time__input:focus {
 
 .react-datepicker__navigation--previous:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .react-datepicker__navigation-icon:before {
@@ -3671,7 +3671,7 @@ input.react-datepicker-time__input:focus {
 
 .react-datepicker__navigation--next:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .react-datepicker__day {
@@ -3689,7 +3689,7 @@ input.react-datepicker-time__input:focus {
   line-height: 1.25rem;
   line-height: 2;
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(209 213 219 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -3712,17 +3712,17 @@ input.react-datepicker-time__input:focus {
 
 .react-datepicker__day--outside-month {
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .react-datepicker__day--in-range {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .react-datepicker__day--in-selecting-range {
   --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .react-datepicker__day--selecting-range-start {
@@ -3793,6 +3793,10 @@ input.react-datepicker-time__input:focus {
 
 .ProseMirror {
   outline: none;
+  background-color: #1a202c;
+  /* Dark background */
+  color: #e2e8f0;
+  /* Light text */
 }
 
 .ProseMirror h1,
@@ -3881,18 +3885,21 @@ input.react-datepicker-time__input:focus {
 
 .ProseMirror blockquote {
   padding-left: 1rem;
-  border-left: 2px solid rgba(13, 13, 13, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  /* Adjusted border color */
 }
 
 .ProseMirror hr {
   border: none;
-  border-top: 2px solid rgba(13, 13, 13, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  /* Adjusted border color */
   margin: 2rem 0;
 }
 
 .ProseMirror a {
   text-decoration: underline;
-  color: blue;
+  color: #4a5568;
+  /* Adjusted link color */
   cursor: pointer;
   display: inline-block !important;
 }
@@ -3902,8 +3909,10 @@ input.react-datepicker-time__input:focus {
 }
 
 .ProseMirror code {
-  background-color: #6161611a;
-  color: #616161;
+  background-color: #2d3748;
+  /* Adjusted code block background color */
+  color: #d8dee9;
+  /* Adjusted code block text color */
   font-family: monospace;
   font-weight: 500;
 }
@@ -3916,37 +3925,43 @@ input.react-datepicker-time__input:focus {
 .ProseMirror .hljs-comment,
 .ProseMirror .hljs-quote,
 .ProseMirror code > div {
-  color: #ccc;
+  color: #4a5568;
+  /* Adjusted code block text color */
 }
 
 .ProseMirror .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #282a36;
+  background: #1a202c;
+  /* Adjusted code block background color */
 }
 
 .ProseMirror .hljs-built_in,
 .ProseMirror .hljs-selector-tag,
 .ProseMirror .hljs-section,
 .ProseMirror .hljs-link {
-  color: #8be9fd;
+  color: #4a5568;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-keyword {
-  color: #ff79c6;
+  color: #a3be8c;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs,
 .ProseMirror .hljs-subst {
-  color: #f8f8f2;
+  color: #d8dee9;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-title,
 .ProseMirror .hljs-attr,
 .ProseMirror .hljs-meta-keyword {
   font-style: italic;
-  color: #50fa7b;
+  color: #81a1c1;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-string,
@@ -3959,13 +3974,15 @@ input.react-datepicker-time__input:focus {
 .ProseMirror .hljs-variable,
 .ProseMirror .hljs-template-tag,
 .ProseMirror .hljs-template-variable {
-  color: #f1fa8c;
+  color: #ebcb8b;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-comment,
 .ProseMirror .hljs-quote,
 .ProseMirror .hljs-deletion {
-  color: #6272a4;
+  color: #4a5568;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-keyword,
@@ -3982,7 +3999,8 @@ input.react-datepicker-time__input:focus {
 
 .ProseMirror .hljs-literal,
 .ProseMirror .hljs-number {
-  color: #bd93f9;
+  color: #b48ead;
+  /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-emphasis {
@@ -4020,7 +4038,7 @@ input.react-datepicker-time__input:focus {
 .ProseMirror .is-editor-empty:first-child::before {
   content: attr(data-placeholder);
   float: left;
-  color: #9ca3af;
+  color: #4a5568;
   pointer-events: none;
   height: 0;
 }
@@ -4028,13 +4046,13 @@ input.react-datepicker-time__input:focus {
 .ProseMirror .is-empty::before {
   content: attr(data-placeholder);
   float: left;
-  color: #9ca3af;
+  color: #4a5568;
   pointer-events: none;
   height: 0;
 }
 
 ul[data-type='taskList'] li[data-checked='true'] > div > p {
-  color: #9ca3af;
+  color: #4a5568;
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
