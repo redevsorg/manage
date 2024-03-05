@@ -7,14 +7,14 @@ type ModalProps = {
 const Modal = ({ children, title, close }: ModalProps) => (
   <div className="fixed inset-x-0 z-50 flex w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-[rgba(0,0,0,0.5)] inset-0 h-full">
     <div className="relative w-full max-w-2xl p-4 md:h-auto">
-      <div className="relative rounded-lg bg-white shadow">
-        <div className="flex items-start justify-between rounded-t border-b p-4">
-          <h3 className="text-xl font-semibold text-gray-900 capitalize">
+      <div className="relative rounded-lg bg-black border-2 border-neutral-800">
+        <div className="flex items-start justify-between rounded-t border-b-2 border-neutral-800 p-4">
+          <h3 className="text-xl font-semibold text-white capitalize">
             {title}
           </h3>
           <button
             type="button"
-            className="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            className="ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-neutral-700 hover:bg-neutral-800"
             data-modal-toggle="defaultModal"
             onClick={close}
           >

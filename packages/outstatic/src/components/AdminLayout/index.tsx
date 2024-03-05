@@ -43,7 +43,7 @@ export default function AdminLayout({
       <div id="outstatic">
         <Toaster richColors />
         {status === 'loading' ? null : (
-          <div className="flex h-screen flex-col bg-white text-black">
+          <div className="flex h-screen flex-col bg-black text-white">
             <AdminHeader
               {...session?.user}
               status={status}
@@ -51,7 +51,7 @@ export default function AdminLayout({
             />
             <div className="flex md:grow flex-col-reverse justify-between md:flex-row">
               <Sidebar isOpen={openSidebar} />
-              <main className="w-auto flex-auto p-5 md:p-10 bg-white h-dvh max-h-[calc(100vh-128px)] md:max-h-[calc(100vh-53px)] overflow-y-scroll scrollbar-hide">
+              <main className="w-auto flex-auto p-5 md:p-10 bg-black h-dvh max-h-[calc(100vh-128px)] md:max-h-[calc(100vh-53px)] overflow-y-scroll scrollbar-hide">
                 {error && (
                   <div className="mb-6 border border-red-500 p-2">
                     Something went wrong{' '}
