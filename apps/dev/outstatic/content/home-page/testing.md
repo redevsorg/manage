@@ -10,4 +10,4 @@ coverImage: ''
 publishedAt: '2024-03-05T04:01:14.771Z'
 ---
 
-![](/images/redevs-jan-update-instagram--1--medium-g3MT.png)
+Sahith Panchumarthy | Founder![](/images/redevs-jan-update-instagram--1--medium-g3MT.png)
