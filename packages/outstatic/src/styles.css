@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .react-datepicker__input-container input {
-  @apply block w-full cursor-pointer rounded border border-gray-300 bg-white text-base shadow-sm md:text-sm;
+  @apply block w-full cursor-pointer rounded border border-gray-700 bg-gray-900 text-base shadow-sm md:text-sm;
 }
 
 .react-datepicker-popper {
-  @apply z-40 w-72 rounded border-2 border-gray-200 bg-white px-3 py-2 text-sm shadow;
+  @apply z-40 w-72 rounded border-2 border-gray-700 bg-gray-900 px-3 py-2 text-sm shadow;
 }
 
 .react-datepicker-left {
@@ -19,7 +21,7 @@
 }
 
 .react-datepicker__portal {
-  @apply absolute top-[115px] right-6 z-10 w-72 transform-none rounded border-2 border-gray-200 bg-white px-3 py-2 text-sm shadow;
+  @apply absolute top-[115px] right-6 z-10 w-72 transform-none rounded border-2 border-gray-700 bg-gray-900 px-3 py-2 text-sm shadow;
 }
 
 .react-datepicker__month-container {
@@ -31,15 +33,15 @@
 }
 
 .react-datepicker__current-month {
-  @apply ml-2.5 text-lg font-semibold text-gray-800;
+  @apply ml-2.5 text-lg font-semibold text-gray-300;
 }
 
 .react-datepicker__input-time-container {
-  @apply flex items-center ml-2.5 font-semibold text-gray-800;
+  @apply flex items-center ml-2.5 font-semibold text-gray-300;
 }
 
 input.react-datepicker-time__input {
-  @apply block cursor-pointer appearance-none rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm font-normal leading-loose text-gray-700 focus:border-blue-500 focus:ring-blue-500 outline-none;
+  @apply block cursor-pointer appearance-none rounded-lg border border-gray-700 bg-gray-900 p-2 text-sm font-normal leading-loose text-gray-300 focus:border-blue-500 focus:ring-blue-500 outline-none;
 }
 
 .react-datepicker-time__caption {
@@ -78,7 +80,7 @@ input.react-datepicker-time__input {
 }
 
 .react-datepicker__navigation--previous {
-  @apply right-12 flex h-8 w-8 items-center justify-center rounded transition hover:bg-gray-200;
+  @apply right-12 flex h-8 w-8 items-center justify-center rounded transition hover:bg-gray-700;
 }
 
 .react-datepicker__navigation-icon:before {
@@ -104,11 +106,11 @@ input.react-datepicker-time__input {
 }
 
 .react-datepicker__navigation--next {
-  @apply right-4 flex h-8 w-8 items-center justify-center rounded transition hover:bg-gray-200;
+  @apply right-4 flex h-8 w-8 items-center justify-center rounded transition hover:bg-gray-700;
 }
 
 .react-datepicker__day {
-  @apply mb-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded py-1 text-sm leading-loose text-gray-700 transition hover:border;
+  @apply mb-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded py-1 text-sm leading-loose text-gray-300 transition hover:border;
 }
 
 .react-datepicker__day--disabled {
@@ -116,15 +118,15 @@ input.react-datepicker-time__input {
 }
 
 .react-datepicker__day--outside-month {
-  @apply text-gray-300;
+  @apply text-gray-400;
 }
 
 .react-datepicker__day--in-range {
-  @apply bg-gray-200;
+  @apply bg-gray-700;
 }
 
 .react-datepicker__day--in-selecting-range {
-  @apply bg-blue-200;
+  @apply bg-blue-700;
 }
 
 .react-datepicker__day--selecting-range-start {
@@ -162,6 +164,8 @@ input.react-datepicker-time__input {
 /* Basic editor styles */
 .ProseMirror {
   outline: none;
+  background-color: #1a202c; /* Dark background */
+  color: #e2e8f0; /* Light text */
 }
 
 .ProseMirror h1,
@@ -250,18 +254,18 @@ input.react-datepicker-time__input {
 
 .ProseMirror blockquote {
   padding-left: 1rem;
-  border-left: 2px solid rgba(13, 13, 13, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.1); /* Adjusted border color */
 }
 
 .ProseMirror hr {
   border: none;
-  border-top: 2px solid rgba(13, 13, 13, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1); /* Adjusted border color */
   margin: 2rem 0;
 }
 
 .ProseMirror a {
   text-decoration: underline;
-  color: blue;
+  color: #4a5568; /* Adjusted link color */
   cursor: pointer;
   display: inline-block !important;
 }
@@ -271,8 +275,8 @@ input.react-datepicker-time__input {
 }
 
 .ProseMirror code {
-  background-color: #6161611a;
-  color: #616161;
+  background-color: #2d3748; /* Adjusted code block background color */
+  color: #d8dee9; /* Adjusted code block text color */
   font-family: monospace;
   font-weight: 500;
 }
@@ -285,37 +289,37 @@ input.react-datepicker-time__input {
 .ProseMirror .hljs-comment,
 .ProseMirror .hljs-quote,
 .ProseMirror code > div {
-  color: #ccc;
+  color: #4a5568; /* Adjusted code block text color */
 }
 
 .ProseMirror .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #282a36;
+  background: #1a202c; /* Adjusted code block background color */
 }
 
 .ProseMirror .hljs-built_in,
 .ProseMirror .hljs-selector-tag,
 .ProseMirror .hljs-section,
 .ProseMirror .hljs-link {
-  color: #8be9fd;
+  color: #4a5568; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-keyword {
-  color: #ff79c6;
+  color: #a3be8c; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs,
 .ProseMirror .hljs-subst {
-  color: #f8f8f2;
+  color: #d8dee9; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-title,
 .ProseMirror .hljs-attr,
 .ProseMirror .hljs-meta-keyword {
   font-style: italic;
-  color: #50fa7b;
+  color: #81a1c1; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-string,
@@ -328,13 +332,13 @@ input.react-datepicker-time__input {
 .ProseMirror .hljs-variable,
 .ProseMirror .hljs-template-tag,
 .ProseMirror .hljs-template-variable {
-  color: #f1fa8c;
+  color: #ebcb8b; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-comment,
 .ProseMirror .hljs-quote,
 .ProseMirror .hljs-deletion {
-  color: #6272a4;
+  color: #4a5568; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-keyword,
@@ -351,7 +355,7 @@ input.react-datepicker-time__input {
 
 .ProseMirror .hljs-literal,
 .ProseMirror .hljs-number {
-  color: #bd93f9;
+  color: #b48ead; /* Adjusted syntax highlight color */
 }
 
 .ProseMirror .hljs-emphasis {
@@ -376,20 +380,20 @@ input.react-datepicker-time__input {
 .ProseMirror .is-editor-empty:first-child::before {
   content: attr(data-placeholder);
   float: left;
-  color: #9ca3af;
+  color: #4a5568;
   pointer-events: none;
   height: 0;
 }
 .ProseMirror .is-empty::before {
   content: attr(data-placeholder);
   float: left;
-  color: #9ca3af;
+  color: #4a5568;
   pointer-events: none;
   height: 0;
 }
 
 ul[data-type='taskList'] li[data-checked='true'] > div > p {
-  color: #9ca3af;
+  color: #4a5568;
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
