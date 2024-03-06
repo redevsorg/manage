@@ -97,7 +97,7 @@ const DeleteDocumentButton = ({
         onClick={() => setShowDeleteModal(true)}
         type="button"
         disabled={disabled}
-        className={`z-10 inline-block text-gray-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg text-sm p-1.5 ${className}`}
+        className={`z-10 inline-block text-neutral-300 hover:bg-neutral-800 focus:ring-4 focus:outline-none focus:ring-neutral-800 rounded-lg text-sm p-1.5 ${className}`}
         title="Delete document"
       >
         <span className="sr-only">Delete document</span>
@@ -106,15 +106,15 @@ const DeleteDocumentButton = ({
       {showDeleteModal && (
         <Modal title="Delete Document" close={() => setShowDeleteModal(false)}>
           <div className="space-y-6 p-6 text-left">
-            <p className="text-base leading-relaxed text-gray-500">
+            <p className="text-base leading-relaxed text-neutral-500">
               Are you sure you want to delete this document?
             </p>
-            <p className="text-base leading-relaxed text-gray-500">
+            <p className="text-base leading-relaxed text-neutral-500">
               This action cannot be undone.
             </p>
           </div>
 
-          <div className="flex items-center space-x-2 rounded-b border-t p-6">
+          <div className="flex items-center space-x-2 rounded-b border-t-2 border-neutral-800 p-6">
             <button
               type="button"
               className="flex rounded-lg bg-red-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none"
@@ -152,7 +152,7 @@ const DeleteDocumentButton = ({
             </button>
             <button
               type="button"
-              className="rounded-lg border border-gray-200 px-5 py-2.5 text-sm font-medium focus:z-10 focus:outline-none focus:ring-4 order-gray-600 bg-gray-800 text-white hover:border-gray-600 hover:bg-gray-700 focus:ring-gray-700"
+              className="rounded-lg border-2 border-neutral-800 px-5 py-2.5 text-sm font-medium focus:z-10 focus:outline-none focus:ring-4 bg-neutral-900 text-white hover:bg-neutral-800 focus:ring-neutral-700"
               onClick={() => setShowDeleteModal(false)}
             >
               Cancel

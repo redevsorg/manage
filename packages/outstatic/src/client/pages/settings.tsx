@@ -14,15 +14,15 @@ export default function Settings() {
         <h1 className="mr-12 text-2xl">Settings</h1>
       </div>
       <div className="max-w-lg">
-        <div className="mb-8 max-w-2xl p-8 px-4 md:p-8 text-black bg-white rounded-lg border border-gray-200 shadow-md prose prose-base">
-          <h2>Metadata</h2>
+        <div className="mb-8 max-w-2xl p-8 px-4 md:p-8 text-white bg-black rounded-lg border-2 border-neutral-800 shadow-md prose prose-base">
+          <h2 className="text-white">Metadata</h2>
           <div className="flex flex-row items-center">
             <button
               className={clsx(
-                'cursor-pointer rounded-lg border px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 focus:ring-gray-700 no-underline',
+                'cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 focus:ring-neutral-800 no-underline',
                 'text-white',
-                'border-gray-600 bg-gray-800',
-                rebuild && 'border-gray-400 bg-gray-500'
+                'bg-neutral-800',
+                rebuild && 'bg-neutral-700'
               )}
               onClick={() => setRebuilding(true)}
             >
@@ -41,34 +41,34 @@ export default function Settings() {
           </p>
         </div>
 
-        <div className="mb-8 max-w-2xl p-8 px-4 md:p-8 text-black bg-white rounded-lg border border-gray-200 shadow-md prose prose-base">
-          <h2>Environment</h2>
+        <div className="mb-8 max-w-2xl p-8 px-4 md:p-8 text-white bg-black rounded-lg border-2 border-neutral-800 shadow-md prose prose-base">
+          <h2 className="text-white">Environment</h2>
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-900">
+            <label className="block mb-2 text-sm font-medium text-neutral-500">
               Repository
             </label>
             <input
-              className="cursor-not-allowed block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm outline-none"
+              className="cursor-not-allowed block p-2 w-full text-neutral-200 bg-neutral-950 rounded-lg border border-neutral-800 sm:text-sm outline-none"
               value={repoSlug}
               readOnly
             />
           </div>
           <div className="mt-4">
-            <label className="block mb-2 text-sm font-medium text-gray-900">
+            <label className="block mb-2 text-sm font-medium text-neutral-500">
               Branch
             </label>
             <input
-              className="cursor-not-allowed block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm outline-none"
+              className="cursor-not-allowed block p-2 w-full text-neutral-200 bg-neutral-950 rounded-lg border border-neutral-800 sm:text-sm outline-none"
               value={repoBranch}
               readOnly
             />
           </div>
           <div className="mt-4">
-            <label className="block mb-2 text-sm font-medium text-gray-900">
+            <label className="block mb-2 text-sm font-medium text-neutral-500">
               Content Path
             </label>
             <input
-              className="cursor-not-allowed block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm outline-none"
+              className="cursor-not-allowed block p-2 w-full text-neutral-200 bg-neutral-950 rounded-lg border border-neutral-800 sm:text-sm outline-none"
               value={`${contentPath}`}
               readOnly
             />
@@ -80,7 +80,7 @@ export default function Settings() {
               href="https://outstatic.com/docs/environment-variables"
               target="_blank"
               rel="noreferrer"
-              className="underline font-semibold"
+              className="underline font-semibold text-neutral-300"
             >
               click here
             </a>

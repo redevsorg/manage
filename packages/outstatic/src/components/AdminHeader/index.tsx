@@ -28,7 +28,7 @@ const AdminHeader = ({
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
-            className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden"
+            className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-neutral-100 hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 lg:hidden"
             aria-controls="mobile-menu-2"
             aria-expanded="false"
             onClick={toggleSidebar}

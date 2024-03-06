@@ -39,8 +39,8 @@ const DocumentsTable = (props: DocumentsTableProps) => {
 
   return (
     <div>
-      <table className="w-full text-left text-sm text-gray-500">
-        <thead className="bg-gray-50 text-xs uppercase text-gray-700 border-b">
+      <table className="bg-black w-full text-left text-sm text-neutral-200">
+        <thead className="bg-black text-xs uppercase text-neutral-300 border-b-2 border-neutral-800">
           <tr>
             {columns.map((column) => (
               <th key={column.value} scope="col" className="px-6 py-3">
@@ -62,12 +62,12 @@ const DocumentsTable = (props: DocumentsTableProps) => {
             documents.map((document) => (
               <tr
                 key={document.slug}
-                className="border-b bg-white hover:bg-gray-50"
+                className="border-b-2 border-neutral-800 bg-black hover:bg-neutral-950"
               >
                 {columns.map((column) => {
                   return cellSwitch(column.value, document, props.collection)
                 })}
-                <td className="pr-6 py-4 text-right">
+                <td className="pr-6 py-4 text-right text-neutral-400">
                   <DeleteDocumentButton
                     slug={document.slug}
                     disabled={false}
@@ -119,10 +119,10 @@ const cellSwitch = (
         <th
           key="title"
           scope="row"
-          className="relative whitespace-nowrap px-6 py-4 text-base font-semibold text-gray-900 group"
+          className="relative whitespace-nowrap px-6 py-4 text-base font-semibold text-neutral-200 group"
         >
           <Link href={`/outstatic/${collection}/${document.slug}`}>
-            <div className="group-hover:text-blue-500">
+            <div className="group-hover:text-white">
               {item as string}
               <div className="absolute top-0 bottom-0 left-0 right-40 cursor-pointer" />
             </div>
@@ -133,13 +133,13 @@ const cellSwitch = (
       return (
         <td
           key={columnValue}
-          className="px-6 py-4 text-base font-semibold text-gray-900"
+          className="px-6 py-4 text-base font-semibold text-neutral-200"
         >
           {typeof item === 'object' && item !== null
             ? item.map((item: { label: string }) => (
                 <span
                   key={item.label}
-                  className="bg-gray-100 text-gray-800 font-medium me-2 px-2.5 py-0.5 rounded"
+                  className="bg-black text-neutral-200 font-medium me-2 px-2.5 py-0.5 rounded"
                 >
                   {item.label}
                 </span>

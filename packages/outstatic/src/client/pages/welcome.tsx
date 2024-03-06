@@ -16,7 +16,7 @@ type WelcomeProps = {
 export default function Welcome({ variables }: WelcomeProps) {
   return (
     <>
-      <div id="outstatic">
+      <div className="bg-black" id="outstatic">
         <main className="relative flex h-screen bg-black flex-col items-center justify-center z-10 p-4">
           <h1 className="mb-8 text-center text-xl font-semibold text-white border-2 px-6 p-2 rounded-full border-neutral-800">
             <Image

@@ -5,7 +5,7 @@ type AlertProps = {
 
 const alertStyles = {
   success: 'text-green-700 bg-green-100',
-  info: 'text-blue-700 bg-blue-100',
+  info: 'bg-amber-100 text-amber-800',
   error: 'text-red-700 bg-red-100',
   warning: 'text-yellow-700 bg-yellow-100'
 }

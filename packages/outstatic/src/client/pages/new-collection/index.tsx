@@ -91,23 +91,24 @@ export default function NewCollection() {
         </div>
         {error ? (
           <Alert type="error">
-            <span className="font-medium">Oops!</span> We couldn&apos;t create
-            your collection. Please, make sure your settings are correct by{' '}
+            <span className="text-white font-medium">Oops!</span> We
+            couldn&apos;t create your collection. Please, make sure your
+            settings are correct by{' '}
             <Link href="/outstatic/settings">
-              <span className="underline">clicking here</span>
+              <span className="underline text-white">clicking here</span>
             </Link>{' '}
             .
           </Alert>
         ) : null}
         <form
-          className="max-w-5xl w-full flex mb-4 items-start"
+          className="max-w-5xl w-full flex-col mb-4 items-start"
           onSubmit={methods.handleSubmit(onSubmit)}
         >
+          <label className="text-neutral-200">Collection Name</label>
           <Input
-            label="Collection Name"
             id="name"
             inputSize="medium"
-            className="w-full max-w-sm md:w-80"
+            className="w-full max-w-sm md:w-80 text-black border-neutral-800 border-2"
             placeholder="Ex: Posts"
             type="text"
             helperText="We suggest naming the collection in plural form, ex: Docs"
@@ -123,7 +124,7 @@ export default function NewCollection() {
           <button
             type="submit"
             disabled={loading || !hasChanges}
-            className="flex rounded-lg border border-gray-600 bg-gray-800 px-5 py-2 text-sm font-medium text-white hover:border-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 disabled:cursor-not-allowed disabled:bg-gray-600 ml-2 mt-7 mb-5"
+            className="flex rounded-lg bg-neutral-800 hover:bg-neutral-800/90 text-white hover:scale-105 focus:ring-neutral-700  disabled:cursor-not-allowed disabled:bg-neutral-600 ml-2 mt-7 mb-5 px-5 py-2"
           >
             {loading ? (
               <>

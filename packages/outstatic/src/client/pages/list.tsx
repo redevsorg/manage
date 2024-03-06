@@ -94,7 +94,7 @@ export default function List({ collection }: ListProps) {
       <div className="mb-8 flex h-12 items-center">
         <h1 className="mr-12 text-2xl capitalize">{collection}</h1>
         <Link href={`/outstatic/${collection}/new`}>
-          <div className="cursor-pointer rounded-lg border px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 border-gray-600 bg-gray-800 text-white hover:border-gray-600 hover:bg-gray-700 focus:ring-gray-700 capitalize">
+          <div className="cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 bg-neutral-800 hover:bg-neutral-800/90 text-white hover:border-2 hover:border-neutral-800 focus:ring-neutral-700 capitalize">
             New {singular(collection)}
           </div>
         </Link>
@@ -106,21 +106,8 @@ export default function List({ collection }: ListProps) {
       )}
       {documents.length === 0 && !loading && (
         <div className="max-w-2xl">
-          <div className="absolute bottom-0 left-0 md:left-64 right-0 md:top-36">
-            <svg
-              fill="none"
-              className="h-full w-full"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m1555.43 194.147c-100.14 46.518-204.72 78.763-313.64 96.841-78.16 12.972-282.29 0-291.79-143.988-1.58-23.948 1-89.4705 67-127 58-32.9805 115.15-13.36095 142.5 5.5 27.35 18.861 45.02 44.5 54 73 16.37 51.951-9.22 115.124-30.65 161.874-57.09 124.562-177.31 219.357-311.976 246.789-142.617 29.052-292.036-9.369-430.683-41.444-100.166-23.173-196.003-36.724-298.229-15.203-48.046 10.115-94.9295 24.91-139.962 44.112"
-                className="stroke-slate-900"
-                strokeWidth="2"
-              />
-            </svg>
-          </div>
           <div className="relative">
-            <div className="mb-20 max-w-2xl p-8 px-4 md:p-8 text-black bg-white rounded-lg border border-gray-200 shadow-md prose prose-base">
+            <div className="mb-20 max-w-2xl p-8 px-4 md:p-8 text-white bg-black rounded-lg border-2 border-neutral-800 shadow-md prose prose-base">
               <p>This collection has no documents yet.</p>
               <p>
                 Create your first{' '}
@@ -129,7 +116,7 @@ export default function List({ collection }: ListProps) {
               </p>
 
               <Link href={`/outstatic/${collection}/new`}>
-                <div className="inline-block cursor-pointer rounded-lg border px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 border-gray-600 bg-gray-800 text-white hover:border-gray-600 hover:bg-gray-700 focus:ring-gray-700 capitalize">
+                <div className="inline-block cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 bg-neutral-800 hover:bg-neutral-800/90 text-white hover:scale-105 focus:ring-neutral-700 capitalize">
                   New {singular(collection)}
                 </div>
               </Link>
@@ -139,6 +126,7 @@ export default function List({ collection }: ListProps) {
                   href="https://outstatic.com/docs/introduction#whats-a-document"
                   target="_blank"
                   rel="noreferrer"
+                  className="text-neutral-300"
                 >
                   click here
                 </a>

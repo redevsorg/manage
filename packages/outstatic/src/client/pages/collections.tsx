@@ -106,7 +106,7 @@ export default function Collections() {
               <p>Create your first Collection by clicking the button below.</p>
 
               <Link href="/outstatic/collections/new">
-                <div className="inline-block rounded-lg border px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 border-neutral-800 bg-neutral-900 text-white hover:border-neutral-800 hover:bg-neutral-800 focus:ring-neutral-700 no-underline">
+                <div className="inline-block rounded-lg px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 bg-neutral-800 hover:bg-neutral-800/90 text-white hover:border-2 hover:border-neutral-800 focus:ring-neutral-700 no-underline">
                   New Collection
                 </div>
               </Link>
@@ -129,7 +129,7 @@ export default function Collections() {
           <div className="mb-8 flex h-12 items-center">
             <h1 className="mr-12 text-2xl">Collections</h1>
             <Link href="/outstatic/collections/new">
-              <div className="cursor-pointer rounded-lg border-2 px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 border-neutral-800 bg-neutral-900 text-white hover:border-neutral-800 hover:bg-neutral-800 focus:ring-neutral-700 no-underline">
+              <div className="cursor-pointer rounded-lg px-5 py-2.5 text-sm font-medium focus:outline-none focus:ring-4 bg-neutral-800 hover:bg-neutral-800/90 text-white hover:border hover:border-neutral-800 focus:ring-neutral-700 no-underline">
                 New Collection
               </div>
             </Link>
@@ -205,11 +205,11 @@ export default function Collections() {
           }}
         >
           <div className="space-y-6 p-6 text-left">
-            <p className="text-base leading-relaxed text-neutral-200">
+            <p className="text-base leading-relaxed text-neutral-500">
               Are you sure you want to delete this collection? This may break
               your website.
             </p>
-            <p className="text-base leading-relaxed text-neutral-200">
+            <p className="text-base leading-relaxed text-neutral-500">
               This action cannot be undone.
             </p>
           </div>

@@ -15,7 +15,7 @@ export default function Login() {
 
   return (
     <>
-      <div id="outstatic">
+      <div className="bg-black" id="outstatic">
         <main className="relative flex h-screen items-center bg-black justify-center z-10 p-4">
           <div className="relative flex flex-col items-center justify-center">
             {error && loginErrors[error] ? (
