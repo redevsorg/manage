@@ -1,0 +1,14 @@
+{
+  "title": "pages",
+  "type": "object",
+  "properties": {
+    "testing": {
+      "required": true,
+      "description": "",
+      "fieldType": "Tags",
+      "dataType": "array",
+      "title": "testing",
+      "values": []
+    }
+  }
+}
