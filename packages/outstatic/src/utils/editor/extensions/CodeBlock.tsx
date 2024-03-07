@@ -26,7 +26,7 @@ const CodeBlock = ({
 }: CodeBlockProps) => {
   return (
     <NodeViewWrapper className="relative">
-      <div className="absolute top-0 right-6 rounded-b-md border border-t-0 border-gray-600 px-3 py-1">
+      <div className="absolute top-0 right-6 rounded-b-md border-2 border-t-0 border-neutral-800 px-3 py-1">
         <select
           contentEditable={false}
           defaultValue={defaultLanguage}
@@ -44,7 +44,7 @@ const CodeBlock = ({
           ))}
         </select>
       </div>
-      <pre className="text-white bg-slate-900 rounded-md p-4 pt-12">
+      <pre className="text-white bg-black border-2 border-neutral-800 rounded-md p-4 pt-12">
         <NodeViewContent as="code" />
       </pre>
     </NodeViewWrapper>

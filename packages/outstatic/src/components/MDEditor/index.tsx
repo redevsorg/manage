@@ -18,7 +18,12 @@ const MDEditor = ({ id, editor }: MDEditorProps) => {
   return (
     <>
       {editor && <MDEMenu editor={editor} />}
-      <EditorContent name="content" value={watchContent} editor={editor} />
+      <EditorContent
+        name="content"
+        value={watchContent}
+        editor={editor}
+        className=""
+      />
       <div className="mt-1">
         {errors[id]?.message && (
           <span className="text-sm text-red-500">

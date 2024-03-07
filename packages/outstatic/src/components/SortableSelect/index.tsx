@@ -142,17 +142,34 @@ const SortableSelect = ({
           closeMenuOnSelect={false}
           onBlur={onBlur}
           autoFocus
-          className="border border-gray-200 rounded-md"
+          classNamePrefix="rounded-md bg-black text-neutral-300 "
           styles={{
             control: (base) => ({
               ...base,
-              border: 'none',
+              borderRadius: '0.375rem',
+              borderWidth: '2px',
+              borderColor: '#262626',
               boxShadow: 'none',
-              '&:hover': {
-                border: 'none'
-              }
+              backgroundColor: 'black',
+              color: 'white'
+            }),
+            menu: (base) => ({
+              ...base,
+              borderRadius: '0.375rem',
+              borderWidth: '2px',
+              borderColor: '#262626',
+              boxShadow: 'none',
+              backgroundColor: 'black'
             })
           }}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary: 'white'
+            }
+          })}
         />
       </SortableContext>
     </DndContext>

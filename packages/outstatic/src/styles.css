@@ -199,6 +199,7 @@ input.react-datepicker-time__input {
   font-size: 34px;
   line-height: 1.15;
   letter-spacing: -0.015em;
+  color: white;
 }
 
 .ProseMirror h3 {
@@ -208,6 +209,7 @@ input.react-datepicker-time__input {
   font-size: 26px;
   line-height: 1.22;
   letter-spacing: -0.012em;
+  color: white;
 }
 
 .ProseMirror p {
@@ -218,6 +220,16 @@ input.react-datepicker-time__input {
   line-height: 1.58;
   letter-spacing: -0.003em;
   position: relative;
+  color: rgb(229 229 229);
+}
+.ProseMirror strong {
+  font-family: 'PT Serif', Arial, Cambria, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  position: relative;
+  color: rgb(229 229 229);
 }
 
 .ProseMirror *.completing:after {
@@ -268,7 +280,7 @@ input.react-datepicker-time__input {
 
 .ProseMirror blockquote {
   padding-left: 1rem;
-  border-left: 2px solid rgba(13, 13, 13, 0.1);
+  border-left: 2px solid #171717;
 }
 
 .ProseMirror hr {
@@ -279,7 +291,7 @@ input.react-datepicker-time__input {
 
 .ProseMirror a {
   text-decoration: underline;
-  color: blue;
+  color: rgba(0, 208, 255, 0.746);
   cursor: pointer;
   display: inline-block !important;
 }
@@ -365,6 +377,7 @@ input.react-datepicker-time__input {
 .ProseMirror .hljs-name,
 .ProseMirror .hljs-strong {
   font-weight: bold;
+  color:rgb(229 229 229);
 }
 
 .ProseMirror .hljs-literal,

@@ -75,7 +75,7 @@ const MDEMenu = ({ editor }: MDEMenuProps) => {
         return true
       }}
     >
-      <div className="flex prose-sm rounded-md border border-stone-200 bg-white shadow-md transition-all">
+      <div className="flex invert prose-sm rounded-md bg-black transition-all">
         {showLink && (
           <>
             <MDEMenuButton

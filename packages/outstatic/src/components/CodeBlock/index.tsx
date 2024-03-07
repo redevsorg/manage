@@ -44,7 +44,7 @@ const CodeBlock = ({
           ))}
         </select>
       </div>
-      <pre className="text-white bg-slate-900 rounded-md p-4 pt-12">
+      <pre className="text-white bg-white rounded-md p-4 pt-12">
         <NodeViewContent as="code" />
       </pre>
     </NodeViewWrapper>
