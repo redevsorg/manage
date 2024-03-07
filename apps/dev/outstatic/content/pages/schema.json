@@ -9,6 +9,13 @@
       "dataType": "array",
       "title": "testing",
       "values": []
+    },
+    "test": {
+      "required": false,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "test"
     }
   }
 }
