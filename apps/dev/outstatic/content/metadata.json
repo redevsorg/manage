@@ -1,6 +1,6 @@
 {
-  "commit": "7fb5966eb81872a69a11d7ed3e430e9e6b5856cd",
-  "generated": "2024-03-06T07:22:56.357Z",
+  "commit": "fd3a950d30f1fd0b50ee0e4548c7f0cb4ba0ccfe",
+  "generated": "2024-03-07T06:38:57.292Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,24 +19,6 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
-    },
-    {
-      "__outstatic": {
-        "commit": "9637bcf0d7aa912e22e9e0031dd679244f9c9527",
-        "hash": "2309931423",
-        "path": "outstatic/content/pages/about.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "I'm Andre, a product developer and designer from Maceió, Brazil",
-      "publishedAt": "2023-12-28T18:49:02.348Z",
-      "slug": "about",
-      "status": "published",
-      "title": "About Me"
     },
     {
       "__outstatic": {
@@ -179,6 +161,31 @@
         }
       ],
       "title": "Far Out - The Next Steps for Outstatic "
+    },
+    {
+      "__outstatic": {
+        "commit": "fd3a950d30f1fd0b50ee0e4548c7f0cb4ba0ccfe",
+        "hash": "2282086544",
+        "path": "outstatic/content/pages/about.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "I'm Andre, a product developer and designer from Maceió, Brazil",
+      "publishedAt": "2023-12-28T18:49:02.348Z",
+      "slug": "about",
+      "status": "published",
+      "test": "",
+      "testing": [
+        {
+          "label": "new tag",
+          "value": "newTag"
+        }
+      ],
+      "title": "About Me"
     }
   ]
 }

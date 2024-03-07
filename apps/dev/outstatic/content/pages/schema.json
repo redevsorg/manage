@@ -8,7 +8,12 @@
       "fieldType": "Tags",
       "dataType": "array",
       "title": "testing",
-      "values": []
+      "values": [
+        {
+          "value": "newTag",
+          "label": "new tag"
+        }
+      ]
     },
     "test": {
       "required": false,
