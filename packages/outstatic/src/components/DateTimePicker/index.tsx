@@ -66,7 +66,7 @@ const DateTimePicker = ({ date, setDate, id, label }: DateTimePickerProps) => {
   return (
     <>
       {label && (
-        <label className="block text-sm font-medium text-gray-900" htmlFor={id}>
+        <label className="block text-sm font-medium text-white" htmlFor={id}>
           {label}
         </label>
       )}

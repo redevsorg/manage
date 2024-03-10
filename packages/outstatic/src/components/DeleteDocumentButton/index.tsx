@@ -97,7 +97,7 @@ const DeleteDocumentButton = ({
         onClick={() => setShowDeleteModal(true)}
         type="button"
         disabled={disabled}
-        className={`z-10 inline-block text-neutral-300 hover:bg-neutral-800 focus:ring-4 focus:outline-none focus:ring-neutral-800 rounded-lg text-sm p-1.5 ${className}`}
+        className={`inline-block text-neutral-300 hover:bg-neutral-800 focus:ring-4 focus:outline-none focus:ring-neutral-800 rounded-lg text-sm p-1.5 ${className}`}
         title="Delete document"
       >
         <span className="sr-only">Delete document</span>

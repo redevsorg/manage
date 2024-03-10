@@ -65,7 +65,7 @@ const DocumentSettingsImageSelection = ({
       )}
       {showImage && (
         <>
-          <div className="mb-1 block text-sm font-medium text-gray-900">
+          <div className="mb-1 block text-sm font-medium text-white">
             {description}
           </div>
           <div
@@ -112,8 +112,8 @@ const DocumentSettingsImageSelection = ({
       )}
       {showLink && (
         <>
+          <label className="text-white text-sm mb-1 font-medium">{`${description} URL`}</label>
           <Input
-            label={`${description} URL`}
             name={name}
             id={name}
             defaultValue={resolvedImage}
@@ -134,7 +134,7 @@ const DocumentSettingsImageSelection = ({
                 setShowImageOptions(true)
               }}
               type="button"
-              className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              className="rounded-lg bg-neutral-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-neutral-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-neutral-700"
             >
               Cancel
             </button>
@@ -143,7 +143,7 @@ const DocumentSettingsImageSelection = ({
       )}
       {showImageOptions && (
         <>
-          <span className="mb-1 block text-sm font-medium text-gray-900">
+          <span className="mb-1 block text-sm font-medium text-white">
             {label ?? 'Add an image'}
           </span>
           <div className="w-full flex justify-between mt-2">
@@ -155,14 +155,14 @@ const DocumentSettingsImageSelection = ({
                 setLoadingError(false)
               }}
               type="button"
-              className="flex rounded-lg border border-gray-600 bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:border-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 disabled:cursor-not-allowed disabled:bg-gray-600 md:mb-2"
+              className="flex rounded-lg bg-neutral-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-700 disabled:cursor-not-allowed disabled:bg-neutral-600 md:mb-2"
             >
               From link
             </button>
 
             <label
               htmlFor={`${name}-upload`}
-              className="flex cursor-pointer rounded-lg border border-gray-600 bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:border-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 disabled:cursor-not-allowed disabled:bg-gray-600 md:mb-2"
+              className="flex rounded-lg bg-neutral-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-700 disabled:cursor-not-allowed disabled:bg-neutral-600 md:mb-2"
             >
               From file
             </label>

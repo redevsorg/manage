@@ -154,16 +154,14 @@ const ImageCommandList = ({
   }, [selectedIndex])
 
   return (
-    <div id="outstatic invert">
+    <div id="outstatic" className="invert">
       {showLink ? (
-        <div className="flex w-[500px] rounded-sm border border-black outline-none">
-          <div
-            className={`relative w-[500px] border-r outline-none border-black`}
-          >
+        <div className="flex w-[500px] border-2 border-black outline-none">
+          <div className={`relative w-[500px] border-2 border-neutral-800`}>
             <input
               type="text"
               className={`w-full h-full py-2 px-3 outline-none ${
-                errors.imageUrl ? 'bg-red-50' : 'bg-white'
+                errors.imageUrl ? 'bg-red-50' : 'bg-black text-white'
               }`}
               placeholder="Insert link here"
               onChange={handleImageInput}
@@ -185,7 +183,7 @@ const ImageCommandList = ({
         <div
           id="slash-command"
           ref={commandListContainer}
-          className="invert z-50 h-auto max-h-[330px] w-72 overflow-y-auto rounded-md border border-stone-200 bg-white px-1 py-2 shadow-md transition-all"
+          className="invert z-50 h-auto max-h-[330px] w-72 overflow-y-auto rounded-md border border-stone-200 bg-white px-1 py-2 transition-all"
         >
           {items.map((item: CommandItemProps, index: number) => {
             return (
@@ -207,7 +205,7 @@ const ImageCommandList = ({
                   }
                 }}
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border-2 border-stone-200 bg-white">
                   {item.icon}
                 </div>
                 <div>

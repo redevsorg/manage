@@ -51,7 +51,7 @@ const AdminHeader = ({
             <div className="flex items-center md:order-2">
               <button
                 type="button"
-                className="mr-3 flex items-center rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 md:mr-0"
+                className="mr-3 flex items-center rounded-full bg-neutral-800 text-sm focus:ring-4 focus:ring-neutral-800 md:mr-0"
                 id="user-menu-button"
                 aria-expanded="false"
                 data-dropdown-toggle="dropdown"

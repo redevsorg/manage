@@ -73,10 +73,10 @@ const DocumentSettings = ({
 
   return (
     <>
-      <div className="absolute w-full items-center justify-between flex p-4 border-t z-10 bottom-0 bg-white md:hidden">
+      <div className="absolute w-full items-center justify-between flex p-4 border-t-2 border-neutral-800 z-10 bottom-0 bg-black text-white md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+          className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-neutral-800 hover:ring-2 ring-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-800 md:hidden"
         >
           {isOpen ? <PanelRightClose /> : <PanelRight />}
         </button>
@@ -89,7 +89,7 @@ const DocumentSettings = ({
             name="status"
             id="status"
             defaultValue={document.status}
-            className="block cursor-pointer appearance-none rounded-lg border border-gray-300 bg-gray-50 p-2 py-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500"
+            className="block cursor-pointer appearance-none rounded-lg bg-gray-50 p-2 py-2.5 text-sm text-gray-900 outline-none focus:border-neutral-700 focus:ring-border-neutral-700"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -98,7 +98,7 @@ const DocumentSettings = ({
             onClick={saveFunc}
             type="button"
             disabled={loading || !hasChanges}
-            className="flex rounded-lg border border-gray-600 bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:border-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 disabled:cursor-not-allowed disabled:bg-gray-600"
+            className="flex rounded-lg bg-neutral-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-700 disabled:cursor-not-allowed disabled:bg-neutral-900"
           >
             {loading ? (
               <>
@@ -133,7 +133,7 @@ const DocumentSettings = ({
       <aside
         className={`${
           isOpen ? 'block absolute' : 'hidden relative'
-        } md:block w-full border-b border-gray-300 bg-white md:w-64 md:flex-none md:flex-col md:flex-wrap md:items-start md:justify-start md:border-b-0 md:border-l py-6 h-full max-h-[calc(100vh-128px)] md:max-h-[calc(100vh-53px)] scrollbar-hide overflow-scroll`}
+        } md:block w-full text-white bg-neutral-900 md:w-64 md:flex-none md:flex-col md:flex-wrap md:items-start md:justify-start py-6 h-full max-h-[calc(100vh-128px)] md:max-h-[calc(100vh-53px)] scrollbar-hide overflow-scroll`}
       >
         <div className="relative w-full items-center justify-between mb-4 flex px-4">
           <DateTimePicker
@@ -146,7 +146,7 @@ const DocumentSettings = ({
         <div className="hidden md:flex relative w-full items-center justify-between mb-4 px-4">
           <label
             htmlFor="status"
-            className="block text-sm font-medium text-gray-900"
+            className="block text-sm font-medium text-white"
           >
             Status
           </label>
@@ -155,7 +155,7 @@ const DocumentSettings = ({
             name="status"
             id="status"
             defaultValue={document.status}
-            className="block cursor-pointer appearance-none rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500"
+            className="block cursor-pointer appearance-none rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 outline-none focus:border-neutral-700 focus:ring-border-neutral-700"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -174,14 +174,14 @@ const DocumentSettings = ({
                 router.push(`/outstatic/${collection}`)
               }}
               collection={collection}
-              className="hover:bg-slate-200 max-h-[2.25rem]"
+              className="hover:bg-black max-h-[2.25rem]"
             />
           )}
           <button
             onClick={saveFunc}
             type="button"
             disabled={loading || !hasChanges}
-            className="hidden md:flex rounded-lg border border-gray-600 bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:border-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 disabled:cursor-not-allowed disabled:bg-gray-600"
+            className="hidden md:flex rounded-lg bg-neutral-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-neutral-700 focus:outline-none focus:ring-4 focus:ring-neutral-700 disabled:cursor-not-allowed disabled:bg-black"
           >
             {loading ? (
               <>
@@ -214,23 +214,27 @@ const DocumentSettings = ({
         </div>
         <div className="w-full">
           <Accordion title="Author">
+            <label className="text-white text-sm mb-1 font-medium">Name</label>
             <Input
-              label="Name"
               name="author.name"
               id="author.name"
               defaultValue={document.author?.name ?? ''}
               inputSize="small"
               wrapperClass="mb-4"
             />
+            <label className="text-white text-sm mb-1 font-medium">
+              Add an avatar
+            </label>
             <DocumentSettingsImageSelection
-              label="Add an avatar"
               name="author.picture"
               description="Author Avatar"
             />
           </Accordion>
           <Accordion title="URL Slug">
+            <label className="text-white text-sm mb-1 font-medium">
+              Write a slug (optional)
+            </label>
             <Input
-              label="Write a slug (optional)"
               name="slug"
               id="slug"
               defaultValue={document.slug}
@@ -249,13 +253,15 @@ const DocumentSettings = ({
             />
           </Accordion>
           <Accordion title="Description">
+            <label className="text-white text-sm mb-1 font-medium">
+              Write a description (optional)
+            </label>
             <TextArea
               name="description"
               type="textarea"
-              label="Write a description (optional)"
               id="description"
               rows={5}
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 outline-none focus:border-neutral-700 focus:ring-border-neutral-700"
             />
           </Accordion>
 
@@ -297,7 +303,6 @@ const DocumentSettings = ({
               )
             })}
         </div>
-        <hr className="pb-16" />
       </aside>
     </>
   )
