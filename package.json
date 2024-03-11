@@ -1,13 +1,13 @@
 {
-  "name": "outstatic",
-  "version": "1.4.0",
-  "description": "Static site CMS for Next.js",
-  "author": "Andre Vitorio <andre@vitorio.net>",
+  "name": "redevsmanage",
+  "version": "1.0.0",
+  "description": "Redevs.org Static CMS",
+  "author": "Sahith Panchumarthy <sahith@redevs.org>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avitorio/outstatic.git"
+    "url": "https://github.com/avitorio/managedev.git"
   },
-  "homepage": "https://outstatic.com",
+  "homepage": "https://redevs.org",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {

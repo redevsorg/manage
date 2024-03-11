@@ -22,6 +22,9 @@ module.exports = {
           },
           '100%': { 'stroke-dashoffset': '1500', 'stroke-dasharray': '4000' }
         }
+      },
+      fontFamily: {
+        sans: ['"Hanken Grotesk"']
       }
     }
   },
